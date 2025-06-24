@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "519b2c58-7d88-4869-8964-64be897a97c1",
+		"name": "java-cloud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44389429",
+		"_collection_link": "https://alisson-5558754.postman.co/workspace/alisson's-Workspace~38bea7d0-2b1e-4463-8406-e1fb2fe2c794/collection/44389429-519b2c58-7d88-4869-8964-64be897a97c1?action=share&source=collection_link&creator=44389429"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"alisson2\", \"email\":\"pedrina2.alisson@gmail.com\", \"role\":[\"ADMIN\"], \"password\":\"Xp@800823\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8180/auth-api/v1/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8180",
+					"path": [
+						"auth-api",
+						"v1",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"alisson2\",\r\n  \"password\": \"Xp@800823\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8180/auth-api/v1/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8180",
+					"path": [
+						"auth-api",
+						"v1",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbGlzc29uIiwiaWF0IjoxNzUwNjgyNjkxLCJleHAiOjE3NTA3NjkwOTF9.1OPDaPn7KOwqrSrvx2CjDNT5TAl59pIKiTHPa_PdiC5k_dmca5pK-HUclFDxRoCjvXxYmflvLaeny0CoON-ZIA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"surname\":\"Pedrina\",\r\n    \"firstName\":\"Alisson\",\r\n    \"lastName\":\"Magnusson\",\r\n    \"email\":\"pedrina.alisson@gmail.com\",\r\n    \"phone\":\"2348052649901\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8180/account-api/v1/account/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8180",
+					"path": [
+						"account-api",
+						"v1",
+						"account",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fund",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbGlzc29uIiwiaWF0IjoxNzUwNjgyNjkxLCJleHAiOjE3NTA3NjkwOTF9.1OPDaPn7KOwqrSrvx2CjDNT5TAl59pIKiTHPa_PdiC5k_dmca5pK-HUclFDxRoCjvXxYmflvLaeny0CoON-ZIA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"walletAddress\": \"17564d14-870a-448b-a4c0-91abff77fa0c\",\r\n    \"amount\": 20000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8180/transaction-api/v1/wallet/fund",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8180",
+					"path": [
+						"transaction-api",
+						"v1",
+						"wallet",
+						"fund"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "withdraw",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbGlzc29uIiwiaWF0IjoxNzUwNDIwMzUwLCJleHAiOjE3NTA1MDY3NTB9.nU9IsPUfcDo4WgtEl8xgJjhFez7XMs0jAN5fEoKr8JSirHsEyLWJlUOXIA74uocXs6M5Lgl-CzCw1cLTfH0iMg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"walletAddress\": \"d16b6de9-73f9-4988-a378-bdd815fb207b\",\r\n    \"amount\": 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8180/transaction-api/v1/wallet/withdraw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8180",
+					"path": [
+						"transaction-api",
+						"v1",
+						"wallet",
+						"withdraw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transfer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbGlzc29uIiwiaWF0IjoxNzUwNDIwMzUwLCJleHAiOjE3NTA1MDY3NTB9.nU9IsPUfcDo4WgtEl8xgJjhFez7XMs0jAN5fEoKr8JSirHsEyLWJlUOXIA74uocXs6M5Lgl-CzCw1cLTfH0iMg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"sourceWalletAddress\": \"d16b6de9-73f9-4988-a378-bdd815fb207b\",\r\n    \"amount\": 15000,\r\n    \"destinationWalletAddress\":\"4b0a0cf7-b605-421e-8a21-fcec645926b0\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8180/transaction-api/v1/wallet/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8180",
+					"path": [
+						"transaction-api",
+						"v1",
+						"wallet",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
